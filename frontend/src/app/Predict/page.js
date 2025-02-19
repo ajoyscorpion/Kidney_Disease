@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 
+const BASE_URL = "https://kidney-disease-w7lr.onrender.com/"
+
 export default function Home() {
   const [formData, setFormData] = useState({
     age: '',
@@ -37,7 +39,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/predict', {
+      const response = await fetch(`${BASE_URL}predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
