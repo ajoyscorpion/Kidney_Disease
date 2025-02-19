@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const BASE_URL = "https://kidney-disease-w7lr.onrender.com/"
@@ -66,7 +67,9 @@ export default function Home() {
 
   return (
     <main className="container">
-      <h1 style={{textAlign:"center", marginTop:"30px"}}>Kidney Disease Prediction</h1>
+      <Link href="/" style={{textDecoration:"none", color:"black"}}>
+        <h1 style={{textAlign:"center", marginTop:"30px"}}>Kidney Disease Prediction</h1>
+      </Link>
 
       <form onSubmit={handleSubmit} className="form" style={{marginTop:"50px"}}>
         {[
